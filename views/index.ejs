@@ -1,0 +1,25 @@
+<%- include('header.ejs') %>
+
+<script>
+    onload = (event) => {
+ slider()
+ };</script>
+<% if (locals.content) { %>
+    <% if (content == 0) { %>
+      <div class="heading"><h2>No City Found</h2></div>
+ 
+    <%}  else{ %>
+        
+      <form class="result" action="/city" method="post">
+         <% for( let i = 0; i < content.length; i++ ) { %>
+            <button class="card" type="submit" name="lat" value="<%= content[i].lat%>,<%= content[i].lon%>" >
+             <h2><%= content[i].name %></h2>
+         <p><%= content[i].state%>, <%= content[i].country%></p></button>
+         <% } %></form>
+   
+            <% } %>
+<%}  else{ %>  
+   <div class="heading"><h2>ENTER CITY NAME</h2></div>
+   <% } %>
+    
+<%- include('footer.ejs') %>
