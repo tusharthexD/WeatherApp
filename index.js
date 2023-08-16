@@ -9,6 +9,8 @@ const apiKey = "d79d08b803e6a8b372671872b6e40c5c";
 app.use(express.static("public/"));
 app.use(bodyParser.urlencoded({extended: true}));
 
+
+
 app.get('/', (req, res) => {
 
     res.render("index.ejs")})
@@ -21,7 +23,8 @@ app.post('/', async (req, res) => {
         catch (error){
             res.send('Hello World!')}
         })   
-        
+ 
+
 app.post('/city', async (req, res) => {
   
     const latLon = req.body.lat
@@ -56,5 +59,10 @@ function time(time24){
     catch (error){
     res.send('error')}
     })
+    app.get('*', function(req, res){
+        res.redirect("/")
+        res.status(404).send('what???');
+      });
+      
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
