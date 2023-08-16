@@ -21,7 +21,7 @@ h3, h1, h2, p, h4, h5{
 }
 h1{
     font-size: clamp(35px, 4vw, 40px);
-    text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+    text-shadow: 2px 6px 5px #000000,-2px -6px -5px #000000;
 }
 h2{
     font-size: clamp(32px, 4vw, 38px);
@@ -68,10 +68,10 @@ svg{
     display: flex;
    justify-content: center;
    gap: 10px;
-   align-content: center;
+   align-items: center;
 }
 .search input{
-    width: 80%;
+    width:100%;
     background-color: whitesmoke;
     height: 40px;
     outline: none;
@@ -81,16 +81,19 @@ svg{
     color: black;
     font-size: clamp(16px, 3vw, 25px);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
-   -webkit-appearance: none;
+    -webkit-appearance: none;
+}
+.search input::placeholder{
+    color: #345341;
 }
 
 .search button{
     height: 42px;
-    color: gray;
+    color: #345341;
     border-radius: 20px;
     background-color: whitesmoke;
     border: 1px solid transparent;
-    font-size: clamp(16px, 3vw, 20px);
+    font-size: clamp(16px, 3vw, 22px);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     transition:1000ms;
 }
@@ -98,11 +101,6 @@ svg{
 .search button:active{
     transform: scale(1.1);
 
-}
-
-.search button:hover{
-    background-color: #e6fce0;
-    color: #222;
 }
 
 .result{
@@ -147,7 +145,6 @@ svg{
     z-index: -2;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
 
 }
 
