@@ -1,3 +1,6 @@
+var sunrise = document.querySelectorAll(".degcard")[2];
+var sunset = document.querySelectorAll(".degcard")[5]
+
 document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
         document.querySelector("body").style.visibility = "hidden";
@@ -15,21 +18,15 @@ document.onreadystatechange = function() {
 document.querySelector("input").addEventListener("click", slider)
 
 function slider(){
-    document.querySelector(".search").style.marginTop = "15vw";
+    document.querySelector("body").style.marginTop = "15vw";
     
 }
-document.querySelector(".search").style.transition = "all 1s";
+document.querySelector("body").style.transition = "all 1s";
 function barposition(){
-    document.querySelector(".search").style.marginTop = "30px";
+    document.querySelector("body").style.marginTop = "30px";
 }
 // background: -webkit-gradient(linear, left top, left bottom, from(#0d0177), to(#005eff)) fixed;
 
-
-
-
-
-var sunrise = document.querySelectorAll(".degcard")[2];
-var sunset = document.querySelectorAll(".degcard")[5]
 
 
 function sunRise(dt, timezone){
